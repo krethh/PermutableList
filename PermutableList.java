@@ -18,23 +18,24 @@ public class PermutableList<T> extends ArrayList<T> {
 	{
 		List<LinkedList<T>> permutations = new ArrayList<LinkedList<T>>();		
 		Map<T, Integer> countMap = new TreeMap<>();
-		for (T object : this) {
-            countMap.compute(object, (key, val) -> {
-                if (val == null) {
-                    return 1;
-                } else {
-                    return val + 1;
-                }
-            });
-        }	
+		for (T object : this) 
+		{
+        	  countMap.compute(object, (key, val) -> {
+        	    if (val == null) 
+                	   return 1;
+        	    else 
+                	 return val + 1;
+        	  });
+		}	
 		List<T> objects = new LinkedList<T>();
 		int count[] = new int[countMap.size()];
 		int index = 0;
-		for (Map.Entry<T, Integer> entry : countMap.entrySet()) {
-           	objects.add(index, entry.getKey());
-            count[index] = entry.getValue();
-            index++;
-        }
+		for (Map.Entry<T, Integer> entry : countMap.entrySet()) 
+		{
+           		objects.add(index, entry.getKey());
+               	        count[index] = entry.getValue();
+        	        index++;
+		}
 		HashMap<Integer, T> result = new HashMap<>();		
 		permuteUtil(objects, count, result, 0, permutations);		
 		return permutations;
