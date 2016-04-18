@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/*
+Permutation algorithm by Tushar Roy
+https://github.com/mission-peace/interview/blob/master/src/com/interview/recursion/StringPermutation.java
+*/
+
 public class PermutableList<T> extends ArrayList<T> {
 	
 	private static final long serialVersionUID = -8187783488999067907L;
