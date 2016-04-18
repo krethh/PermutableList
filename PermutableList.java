@@ -6,8 +6,8 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /*
-Permutation algorithm by Tushar Roy
-https://github.com/mission-peace/interview/blob/master/src/com/interview/recursion/StringPermutation.java
+* Permutation algorithm by Tushar Roy
+* https://github.com/mission-peace/interview/blob/master/src/com/interview/recursion/StringPermutation.java
 */
 
 public class PermutableList<T> extends ArrayList<T> {
